@@ -1,0 +1,47 @@
+/*
+Theme Name: Daz
+Author: Daryl Malibiran
+Author URI: https://malibiran.com
+Version: 1.0
+Text Domain: daz
+*/
+
+@media only screen and (min-width: 768px) {
+    .py-md-64 {
+        padding-top: 16rem !important;
+        padding-bottom: 16rem !important;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .py-lg-96 {
+        padding-top: 24rem !important;
+        padding-bottom: 24rem !important;
+    }
+}
+
+#hero {
+    position: relative;
+    background-position: center center;
+}
+
+#hero::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    background-image: linear-gradient(45deg, black, transparent);
+    opacity: 0.85;
+    z-index: 0;
+}
+
+#hero h1 {
+    z-index: 1;
+    position: relative;;
+}
