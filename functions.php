@@ -188,4 +188,15 @@ add_filter('wp_enqueue_scripts', 'disable_classic_theme_styles', 100);
 
 // TGM
 require get_template_directory() . '/inc/tgm-plugin-activation.php';
+
+// post excerpt
+function wpdocs_excerpt_more( $more ) {
+	return '&hellip;';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+function wpdocs_custom_excerpt_length( $length ) {
+	return 30;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 ?>
